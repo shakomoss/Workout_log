@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Workout</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Add a New Workout</h1>
+        <form method="POST" action="{{ url_for('add_workout') }}">
+            <div class="form-group">
+                <label for="type">Workout Type</label>
+                <input type="text" id="type" name="type" placeholder="e.g., Cardio, Strength" required>
+            </div>
+            <div class="form-group">
+                <label for="exercise">Exercise</label>
+                <input type="text" id="exercise" name="exercise" placeholder="e.g., Push-ups, Running" required>
+            </div>
+            <div class="form-group">
+                <label for="currentstat">Current Weight</label>
+                <input type="number" id="currentstat" name="currentstat" placeholder="e.g., Push-ups, Running" required>
+            </div>
+            <div class="form-group">
+                <label for="duration">Duration (minutes)</label>
+                <input type="number" id="duration" name="duration" placeholder="e.g., 45" required>
+            </div>
+            <div class="form-group">
+                <label for="calories">Calories Burned</label>
+                <input type="number" id="calories" name="calories" placeholder="e.g., 300" required>
+            </div>
+            <div class="form-group">
+                <label for="user_id">User ID</label>
+                <input type="number" id="user_id" name="user_id" placeholder="Your User ID" required>
+            </div>
+          <button type="submit" class="btn">Add Workout</button>
+        </form>
+    </div>
+</body>
+</html>

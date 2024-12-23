@@ -1,0 +1,101 @@
+/* Reset some default browser styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+}
+
+/* Global heading style */
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Workout list styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+/* Individual workout list item */
+li {
+    background: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for workout items */
+li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Workout details styling */
+li span {
+    display: block;
+    margin-top: 8px;
+    color: #7f8c8d;
+}
+
+/* Bold key information for each workout */
+li .workout-type {
+    font-weight: bold;
+    color: #3498db;
+}
+
+li .workout-info {
+    color: #2c3e50;
+}
+
+/* Responsive design: Adjustments for smaller screens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    li {
+        padding: 12px;
+    }
+}
+
+.button-container {
+    display: flex;                /* Enable Flexbox */
+    justify-content: center;      /* Center horizontally */
+    align-items: center;          /* Center vertically */
+    height: 10vh;                /* Full viewport height */
+}
+
+#butn {
+    padding: 10px 20px;           /* Add some padding for the button */
+    font-size: 16px;               /* Adjust font size */
+    cursor: pointer;              /* Pointer cursor on hover */
+    border-radius: 16px;
+    background-color: #3498db;
+    color: #f7f9fc;
+    border: none;
+}
+
+.delete-btn{
+    
+    padding: 10px 20px;           /* Add some padding for the button */
+    font-size: 16px;               /* Adjust font size */
+    cursor: pointer;              /* Pointer cursor on hover */
+    border-radius: 16px;
+    background-color: #3498db;
+    color: #f7f9fc;
+    border: none;
+    margin-top: 20px
+    
+}

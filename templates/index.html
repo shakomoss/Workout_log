@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workout Log</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <h1>Workout Log</h1>
+    <ul>
+        {% for workout in workouts %}
+        <li>
+            <span class="workout-type">{{ workout.exercise }}</span>
+            <span class="workout-info">{{ workout.duration }} mins, {{ workout.calories }} kcal, Type: {{ workout.type }}, Current Weight: {{ workout.currentstat }}, Workout id: {{workout.user_id}}</span>
+            <form action="{{ url_for('delete_workout', id=workout.id) }}" method="POST" style="display:inline;">
+                <button type="submit" class="btn delete-btn">Delete</button>
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+    <div class="button-container">
+        <button id="butn" onclick="window.location.href='http://127.0.0.1:5000/add'">Add a workout</button>
+    </div>
+    
+</body>
+</html>
